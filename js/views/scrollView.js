@@ -1784,8 +1784,8 @@ ionic.views.Scroll = ionic.views.View.inherit({
     // Otherwise figure out whether we are switching into dragging mode now.
     } else {
 
-      var minimumTrackingForScroll = self.options.locking ? 3 : 0;
-      var minimumTrackingForDrag = 5;
+      var minimumTrackingForScroll = self.options.locking ? 20 : 0;
+      var minimumTrackingForDrag = 20;
 
       var distanceX = Math.abs(currentTouchLeft - self.__initialTouchLeft);
       var distanceY = Math.abs(currentTouchTop - self.__initialTouchTop);
