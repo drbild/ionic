@@ -1490,7 +1490,7 @@ window.ionic = {
     index: 10,
     defaults: {
       hold_timeout	: 500,
-      hold_threshold	: 1
+      hold_threshold	: 20
     },
     timer: null,
     handler: function holdGesture(ev, inst) {
@@ -1618,7 +1618,7 @@ window.ionic = {
     name: 'drag',
     index: 50,
     defaults: {
-      drag_min_distance : 10,
+      drag_min_distance : 20,
       // Set correct_for_drag_min_distance to true to make the starting point of the drag
       // be calculated from where the drag was triggered, not from where the touch started.
       // Useful to avoid a jerk-starting drag, which can make fine-adjustments
@@ -5459,8 +5459,8 @@ ionic.views.Scroll = ionic.views.View.inherit({
     // Otherwise figure out whether we are switching into dragging mode now.
     } else {
 
-      var minimumTrackingForScroll = self.options.locking ? 3 : 0;
-      var minimumTrackingForDrag = 5;
+      var minimumTrackingForScroll = self.options.locking ? 20 : 0;
+      var minimumTrackingForDrag = 20;
 
       var distanceX = Math.abs(currentTouchLeft - self.__initialTouchLeft);
       var distanceY = Math.abs(currentTouchTop - self.__initialTouchTop);
